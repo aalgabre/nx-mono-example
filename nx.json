@@ -1,0 +1,30 @@
+{
+  "npmScope": "feneo",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "portal": {
+      "tags": ["scope:portal", "type:app"]
+    },
+    "portal-e2e": {
+      "tags": []
+    },
+    "shared-ui": {
+      "tags": ["scope:shared", "type:library", "platform:desktop"]
+    },
+    "common-ui-custom-material": {
+      "tags": ["scope:common", "type:library"]
+    },
+    "portal-portal-shell": {
+      "tags": ["scope:portal", "type:feature"]
+    },
+    "portal-portal-customers": {
+      "tags": ["scope:portal", "type:feature"]
+    }
+  }
+}

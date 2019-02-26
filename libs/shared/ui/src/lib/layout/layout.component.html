@@ -1,0 +1,22 @@
+<!--
+  <mat-sidenav-container [hasBackdrop]="false">
+  <mat-sidenav [mode]="'over'" #sidenav role="navigation">
+    <ui-sidenav
+      [menuItems]="menuItems"
+      (closeSidenav)="sidenav.close()"
+    ></ui-sidenav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+-->
+<ui-header
+  [menuItems]="menuItems"
+  [loggedIn]="loggedIn$ | async"
+  (menuClick)="onMenuClicked($event)"
+  (sidenavToggle)="sidenav.toggle()"
+></ui-header>
+
+<main><router-outlet></router-outlet></main>
+<!--
+  </mat-sidenav-content>
+  </mat-sidenav-container>
+-->

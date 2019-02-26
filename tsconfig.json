@@ -1,0 +1,27 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es5",
+    "module": "es2015",
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"],
+    "baseUrl": ".",
+    "paths": {
+      "@feneo/shared/ui": ["libs/shared/ui/src/index.ts"],
+      "@feneo/common/ui/custom-material": [
+        "libs/common/ui/custom-material/src/index.ts"
+      ],
+      "@feneo/portal/portal-shell": ["libs/portal/portal-shell/src/index.ts"],
+      "@feneo/portal/portal-customers": [
+        "libs/portal/portal-customers/src/index.ts"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

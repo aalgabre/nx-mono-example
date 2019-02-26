@@ -1,0 +1,61 @@
+<mat-toolbar color="primary">
+  <!--
+    <div>
+      <button mat-icon-button (click)="onToggleSidenav()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+  -->
+  <!--
+    <div>
+      <a mat-button routerLink="/">
+        <img
+          alt="angular"
+          class="logo"
+          src="../../../assets/img/angular-white-transparent.svg"
+        />
+        feneo
+      </a>
+    </div>
+  -->
+  <div fxFlex>
+    <ul
+      fxLayout
+      fxLayoutGap="10px"
+      fxLayoutAlign="flex-start"
+      class="navigation-items"
+    >
+      <li *ngFor="let menuItem of menuItems" class="item">
+        <a
+          mat-button
+          routerLinkActive="menu-item-active"
+          (click)="emitItemClick(menuItem.name)"
+          [routerLink]="menuItem.route"
+          >{{ menuItem.text }}</a
+        >
+      </li>
+    </ul>
+  </div>
+
+  <div fxFlex>
+    <ul
+      fxLayout
+      fxLayoutGap="10px"
+      fxLayoutAlign="flex-end"
+      class="navigation-items"
+    >
+      <li *ngIf="!loggedIn" class="item">
+        <a
+          mat-button
+          routerLinkActive="menu-item-active"
+          (click)="emitItemClick('login')"
+          routerLink="/login"
+          >Login</a
+        >
+      </li>
+      <li *ngIf="loggedIn" class="item">
+        <a mat-button (click)="emitItemClick('logout')">Logout</a>
+      </li>
+    </ul>
+  </div>
+</mat-toolbar>

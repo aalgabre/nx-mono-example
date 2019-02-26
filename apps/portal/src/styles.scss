@@ -1,0 +1,92 @@
+/* You can add global styles to this file, and also import other style files */
+// @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import '~@angular/material/theming';
+@include mat-core();
+
+$my-app-primary: mat-palette($mat-blue, 900);
+$my-app-accent: mat-palette($mat-pink, 800, 900, A100);
+$my-app-warn: mat-palette($mat-red);
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+@include angular-material-theme($my-app-theme);
+
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.logo {
+  height: 26px;
+  margin: 0 4px 3px 0;
+  vertical-align: middle;
+}
+
+// .mat-elevation {
+//   box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px,
+//     rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
+// }
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-card-content {
+  margin: 0 8px;
+}
+
+mat-card-content {
+  padding: 20px 0px 20px 0px;
+}
+
+.card-buttons {
+  position: absolute !important;
+  top: 5px;
+  right: 10px;
+}
+
+.mat-card-actions {
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  margin-bottom: 0px !important;
+}
+
+.title-container {
+  margin: 20px;
+}
+
+.list-container {
+}
+
+table {
+  width: 100%;
+  .selected {
+    background-color: rgb(238, 238, 238);
+    font-weight: bold;
+  }
+  tr.table-row:hover {
+    cursor: pointer;
+  }
+  tr.mat-footer-row {
+    font-weight: bold;
+  }
+}
+
+.content-container {
+  margin: 20px;
+
+  .fab-button {
+    position: fixed;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    bottom: 0px;
+    right: 0px;
+    z-index: 100;
+  }
+}
